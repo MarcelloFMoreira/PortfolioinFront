@@ -65,7 +65,7 @@ header nav ul li{
 /* ESTILIZAÇÃO TOPO DO SITE */
 
 section.topo-do-site{
-    padding: 10px 4%;
+    padding: 10px 4% 50px 4%;
 }
 
 section.topo-do-site .flex{
@@ -106,6 +106,7 @@ section.topo-do-site .flex{
 
 
 /* ESTILIZAÇÃO DO BOTÃO */
+
 .btn-contato button {
     padding: 10px 40px;
     font-size: 18px;
@@ -145,4 +146,21 @@ section.topo-do-site .flex{
     border:none;
     transform: scale(1.1);
 
+}
+
+/* ESTILIZAÇÃO PAGINA SOBRE */
+
+
+.sobre .interfaces h2{
+    padding: 6% 4%;
+    color: white;
+    display: flex;
+    font-weight: 900;
+    font-size: 40px;
+    justify-content: center;
+    gap: 6px;
+}
+
+.sobre .interfaces h2 span{
+    color:#ED145B;
 }
