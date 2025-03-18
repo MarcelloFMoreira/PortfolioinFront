@@ -22,7 +22,7 @@ body{
 /* ESTILIZAÇÃO DO CABEÇALHO */
 
 header{
-    padding: 40px 4%;
+    padding: 10px;
 }
 
 header > .interface {
@@ -65,14 +65,84 @@ header nav ul li{
 /* ESTILIZAÇÃO TOPO DO SITE */
 
 section.topo-do-site{
-    padding: 40px 4%;
+    padding: 10px 4%;
 }
 
 section.topo-do-site .flex{
     align-items: center;
     justify-content: center;
+    gap: 70px
 }
 
+
+
+.topo-do-site .txtInicial h1{
+    color: white;
+    font-size: 50px;
+    line-height: 70px;
+}
+
+
+.topo-do-site .txtInicial p{
+    color:#ED145B;
+    font-size: 35px;
+    margin:0px 0px 70px;
+}
+
+
+/*retirar també, position e animation caso não queira o keyframe*/
 .img-inicial img{
-    width: 40rem;
+    width: 38rem;
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar{
+    0%{top:0;}
+    100%{top:15px;}
+}
+
+/*Keyframe acima cria o efeito da imagem se preferir só tirar*/
+
+
+/* ESTILIZAÇÃO DO BOTÃO */
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 30px;
+    color: white;
+    margin: 0 15px 0 0;
+    transition: all 1s;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+
+.btn-contato button::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 100%;
+    background-color: #ED145B;
+    transition: all 0.3s;
+    border-radius: 30px; 
+    z-index: -1;
+}
+
+.btn-contato button:hover::before {
+    width: 100%;
+}
+
+
+.btn-contato button:hover {
+    color: white;
+    border:none;
+    transform: scale(1.1);
+
 }
