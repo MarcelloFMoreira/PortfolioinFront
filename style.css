@@ -1,37 +1,37 @@
-
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Quicksand", sans-serif;
 }
 
-body{
+body {
     background-color: #0F0F0F;
     height: 100vh;
 }
 
-.interface{
+.interface {
     max-width: 1280px;
     margin: 0 auto;
 }
-.flex{
+
+.flex {
     display: flex;
 }
 
 /* ESTILIZAÇÃO DO CABEÇALHO */
 
-header{
+header {
     padding: 10px;
 }
 
-header > .interface {
+header>.interface {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-header a{
+header a {
     color: white;
     text-decoration: none;
     font-weight: 500;
@@ -39,16 +39,16 @@ header a{
     transition: .2s;
 }
 
-header a:hover{
+header a:hover {
     color: #ED145B;
     transform: scale(1.05);
 }
 
-header nav ul{
+header nav ul {
     list-style: none;
 }
 
-header nav ul li{ 
+header nav ul li {
     display: inline-block;
     padding: 0 40px;
 }
@@ -57,18 +57,18 @@ header nav ul li{
 .contatos {
     display: flex;
     align-items: center;
-    gap: 15px; 
-    list-style: none; 
+    gap: 15px;
+    list-style: none;
     padding: 10px 40px;
 }
 
 /* ESTILIZAÇÃO TOPO DO SITE */
 
-section.topo-do-site{
+section.topo-do-site {
     padding: 10px 4% 50px 4%;
 }
 
-section.topo-do-site .flex{
+section.topo-do-site .flex {
     align-items: center;
     justify-content: center;
     gap: 70px
@@ -76,30 +76,35 @@ section.topo-do-site .flex{
 
 
 
-.topo-do-site .txtInicial h1{
+.topo-do-site .txtInicial h1 {
     color: white;
     font-size: 50px;
     line-height: 70px;
 }
 
 
-.topo-do-site .txtInicial p{
-    color:#ED145B;
+.topo-do-site .txtInicial p {
+    color: #ED145B;
     font-size: 35px;
-    margin:0px 0px 70px;
+    margin: 0px 0px 70px;
 }
 
 
 /*retirar també, position e animation caso não queira o keyframe*/
-.img-inicial img{
+.img-inicial img {
     width: 38rem;
     position: relative;
     animation: flutuar 2s ease-in-out infinite alternate;
 }
 
-@keyframes flutuar{
-    0%{top:0;}
-    100%{top:15px;}
+@keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 15px;
+    }
 }
 
 /*Keyframe acima cria o efeito da imagem se preferir só tirar*/
@@ -132,7 +137,7 @@ section.topo-do-site .flex{
     height: 100%;
     background-color: #ED145B;
     transition: all 0.3s;
-    border-radius: 30px; 
+    border-radius: 30px;
     z-index: -1;
 }
 
@@ -143,7 +148,7 @@ section.topo-do-site .flex{
 
 .btn-contato button:hover {
     color: white;
-    border:none;
+    border: none;
     transform: scale(1.1);
 
 }
@@ -151,7 +156,7 @@ section.topo-do-site .flex{
 /* ESTILIZAÇÃO PAGINA SOBRE */
 
 
-.sobre .interfaces h2{
+.sobre .interfaces h2 {
     padding: 6% 4%;
     color: white;
     display: flex;
@@ -161,6 +166,79 @@ section.topo-do-site .flex{
     gap: 6px;
 }
 
-.sobre .interfaces h2 span{
-    color:#ED145B;
+.sobre .interfaces h2 span {
+    color: #ED145B;
+}
+
+.sobre .interfaces .textos {
+    padding: 0% 16% 5% 16%;
+    color: white;
+}
+
+.sobre .interfaces .txt1,
+.sobre .interfaces .txt2,
+.sobre .interfaces .txt3,
+.sobre .interfaces .txt4 {
+    font-size: large;
+    padding-bottom: 3%;
+}
+
+.sobre .interfaces .txt2 h3,
+.sobre .interfaces .txt3 h3,
+.sobre .interfaces .txt4 h3 {
+    font-size: x-large;
+    padding-bottom: 1%;
+}
+
+/* ESTILIZAÇÃO CARROSEL */
+
+.carrosel {
+    display: grid;
+    place-items: center;
+}
+
+.carrosel h1 {
+    font-size: 2rem;
+    padding: 10px;
+    margin: 20px 0px;
+}
+
+.carrosel .slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255, 255, 0.4);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.4px);
+    -webkit-backdrop-filter: blur(7.4px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.carrosel .slider-items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    animation: scrooling 10s linear infinite;
+}
+
+@keyframes scrooling {
+    0% {
+        transform: translateX(80%);
+    }
+
+    100% {
+        transform: translateX(-20%);
+    }
+
+}
+
+.slider-items img {
+    width: 12%;
+    margin: 20px;
+
 }
